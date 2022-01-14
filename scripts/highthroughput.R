@@ -10,7 +10,7 @@ statsabz<- fullregressed %>%
 
 ABZplot <- fullregressed %>%
   #dplyr::filter(condition == "DMSO")%>%
-  dplyr::mutate(strain = factor(strain, levels = c("tN2","ECA882","tbb1del","b1del","ben1tbb1del")))%>%
+  dplyr::mutate(strain = factor(strain, levels = c("tN2","tbb1del","b1del","ben1tbb1del")))%>%
   ggplot()+
   aes(strain, phenotype)+
   geom_boxplot(aes(fill=strain),outlier.shape = NA)+
@@ -31,7 +31,7 @@ ABZplot <- fullregressed %>%
 
 ggsave("~/Desktop/2021_Pallotto/plots/figure3.png", units = "in", plot = ABZplot, width = 8, height = 6)
 
-z <- readr::read_csv("~/Desktop/2021_Pallotto/data/2021_tubulinallelesECA882.csv")
+z <- readr::read_csv("~/Desktop/2021_Pallotto/data/2021_tubulinallelescontrol.csv")
 
 statsDMSO<- z %>%
   dplyr::filter(condition=="DMSO")%>%
