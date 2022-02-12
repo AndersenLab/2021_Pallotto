@@ -21,11 +21,11 @@ ABZplot <- fullregressed %>%
   geom_jitter(width = 0.1)+
   cowplot::theme_cowplot(12)+
   scale_fill_manual(values = c("tN2"="orange","tbb1del"="grey","ben1tbb1del"="grey","b1del"="grey"))+
-  scale_x_discrete(labels = c("tN2"="WT","tbb1del" = "Δtbb-1","b1del"="Δben-1\ne1880","ben1tbb1del"="Δben-1\nΔtbb-1"))+
+  scale_x_discrete(labels = expression("tN2"="WT","tbb1del" = paste(italic("tbb-1(gk207)")),"b1del"=paste(italic("ben-1(e1880)")),"ben1tbb1del"=paste(italic("ben-1(e1880) tbb-1(gk207)"))))+
   theme(legend.position = "None",
         strip.background = element_blank(),
         plot.title = element_text(hjust = 0.5),
-        axis.text.x = element_text(size = 12),
+        axis.text.x = element_text(size = 10),
         strip.text = element_text(size = 12, face = "bold"),
         axis.title.x = element_blank())
 
@@ -52,11 +52,11 @@ DMSOplot <- z %>%
   geom_text(aes(x="b1del",y=110, label="****"))+
   geom_text(aes(x="ECA882",y=110, label="ns"))+
   scale_fill_manual(values = c("tN2"="orange","tbb1del"="grey","ben1tbb1del"="grey","b1del"="grey","ECA882"="grey"))+
-  scale_x_discrete(labels = c("tN2"="WT","tbb1del" = "Δtbb-1","b1del"="Δben-1\ne1880","ben1tbb1del"="Δben-1\nΔtbb-1","ECA882"="Δben-1\nECA882"))+
+  scale_x_discrete(labels = expression("tN2"="WT","tbb1del" = paste(italic("tbb-1(gk207)")),"b1del"=paste(italic("ben-1(e1880)")),"ben1tbb1del"=paste(italic("ben-1(e1880) tbb-1(gk207)")),"ECA882"=paste(italic("ben-1(ean65)"))))+
   theme(legend.position = "None",
         strip.background = element_blank(),
         plot.title = element_text(hjust = 0.5),
-        axis.text.x = element_text(size = 12),
+        axis.text.x = element_text(size = 10, ),
         strip.text = element_text(size = 12, face = "bold"),
         axis.title.x = element_blank())
 ggsave("~/Desktop/2021_Pallotto/plots/supplementalfigure_4.png", units = "in", plot = DMSOplot, width = 8, height = 6)
