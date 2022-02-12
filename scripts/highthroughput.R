@@ -21,7 +21,7 @@ ABZplot <- fullregressed %>%
   geom_jitter(width = 0.1)+
   cowplot::theme_cowplot(12)+
   scale_fill_manual(values = c("tN2"="orange","tbb1del"="grey","ben1tbb1del"="grey","b1del"="grey"))+
-  scale_x_discrete(labels = c("tN2"="WT","tbb1del" = "Δtbb-1","b1del"="Δben-1","ben1tbb1del"="Δben-1\nΔtbb-1"))+
+  scale_x_discrete(labels = c("tN2"="WT","tbb1del" = "Δtbb-1","b1del"="Δben-1\ne1880","ben1tbb1del"="Δben-1\nΔtbb-1"))+
   theme(legend.position = "None",
         strip.background = element_blank(),
         plot.title = element_text(hjust = 0.5),
