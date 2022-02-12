@@ -52,7 +52,7 @@ DMSOplot <- z %>%
   geom_text(aes(x="b1del",y=110, label="****"))+
   geom_text(aes(x="ECA882",y=110, label="ns"))+
   scale_fill_manual(values = c("tN2"="orange","tbb1del"="grey","ben1tbb1del"="grey","b1del"="grey","ECA882"="grey"))+
-  scale_x_discrete(labels = c("tN2"="WT","tbb1del" = "Δtbb-1","b1del"="Δben-1","ben1tbb1del"="Δben-1\nΔtbb-1","ECA882"="Δben-1\nECA882"))+
+  scale_x_discrete(labels = c("tN2"="WT","tbb1del" = "Δtbb-1","b1del"="Δben-1\ne1880","ben1tbb1del"="Δben-1\nΔtbb-1","ECA882"="Δben-1\nECA882"))+
   theme(legend.position = "None",
         strip.background = element_blank(),
         plot.title = element_text(hjust = 0.5),
