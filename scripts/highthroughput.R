@@ -21,7 +21,7 @@ ABZplot <- fullregressed %>%
   geom_jitter(width = 0.1)+
   cowplot::theme_cowplot(12)+
   scale_fill_manual(values = c("tN2"="orange","tbb1del"="grey","ben1tbb1del"="grey","b1del"="grey"))+
-  scale_x_discrete(labels = expression("tN2"="WT","tbb1del" = paste(italic("tbb-1(gk207)")),"b1del"=paste(italic("ben-1(e1880)")),"ben1tbb1del"=paste(italic("ben-1(e1880) tbb-1(gk207)"))))+
+  scale_x_discrete(labels = expression("tN2"="WT","tbb1del" = paste(italic("Δtbb-1(gk207)")),"b1del"=paste(italic("ben-1(e1880)")),"ben1tbb1del"=paste(italic("ben-1(e1880) Δtbb-1(gk207)"))))+
   theme(legend.position = "None",
         strip.background = element_blank(),
         plot.title = element_text(hjust = 0.5),
@@ -52,7 +52,7 @@ DMSOplot <- z %>%
   geom_text(aes(x="b1del",y=110, label="****"))+
   geom_text(aes(x="ECA882",y=110, label="ns"))+
   scale_fill_manual(values = c("tN2"="orange","tbb1del"="grey","ben1tbb1del"="grey","b1del"="grey","ECA882"="grey"))+
-  scale_x_discrete(labels = expression("tN2"="WT","tbb1del" = paste(italic("tbb-1(gk207)")),"b1del"=paste(italic("ben-1(e1880)")),"ben1tbb1del"=paste(italic("ben-1(e1880) tbb-1(gk207)")),"ECA882"=paste(italic("ben-1(ean65)"))))+
+  scale_x_discrete(labels = expression("tN2"="WT","tbb1del" = paste(italic("Δtbb-1(gk207)")),"b1del"=paste(italic("ben-1(e1880)")),"ben1tbb1del"=paste(italic("ben-1(e1880) Δtbb-1(gk207)")),"ECA882"=paste(italic("Δben-1(ean65)"))))+
   theme(legend.position = "None",
         strip.background = element_blank(),
         plot.title = element_text(hjust = 0.5),
